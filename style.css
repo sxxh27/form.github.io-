@@ -2,14 +2,6 @@
 	width: 400px;
 }
 
-h1 {
-text-align: center;  
-}
-
-input.invalid {
-background-color: #ffdddd;
-}
-
 .tab {
 display: none;
 }
@@ -28,4 +20,3 @@ display: none;
 }
 #thanks{
 	display: none;
-}
