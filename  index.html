@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="form" name="form" onsubmit='return validate()'> 
+    <div class="tab">
+        <p>Город в котором вы живете?</p>
+        <div class="step_1">
+            <div class="step_1_radio">
+          <input type="radio" name="nameRadio" class="step_1_radio" id="radio_1" value="moskva">
+          <label for="radio_1" class="step_1_label">Москва</label>
+            </div>
+            
+          <div class="step_1_radio">
+          <input type="radio" name="nameRadio" class="step_1_radio" id="radio_2" value="piter">
+          <label for="radio_2" class="step_1_label">Питер</label>
+            </div>
+            
+          <div class="step_1_radio">
+          <input type="radio" name="nameRadio" class="step_1_radio" id="radio_3"  value="rostov">
+          <label for="radio_3" class="step_1_label">Ростов</label>
+            </div>
+            
+          <div class="step_1_radio">
+          <input type="radio" name="nameRadio" class="step_1_radio" id="radio_4" onclick="makeInput()" value="">
+          <label for="radio_4" class="step_1_label" onclick="makeInput()">Другой </label>
+          <input type="text" name="nameText" id="text">
+            </div>
+        </div>
+    </div>
+    <div class="tab">
+        <p>Ваш возраст?</p>
+        <div class="step_2">
+          <div class="step_2_radio">
+            <input type="radio" name="nameRadio" class="step_2_radio" id="radio_1_2" value="16">
+            <label for="radio_1_2" class="step_2_label">16</label>
+          </div>
+            
+          <div class="step_2_radio">
+            <input type="radio" name="nameRadio" class="step_2_radio" id="radio_2_2" value="18">
+            <label for="radio_2_2" class="step_2_label">18</label>
+          </div>
+            
+          <div class="step_2_radio">
+            <input type="radio" name="nameRadio" class="step_2_radio" id="radio_3_2"  value="20">
+            <label for="radio_3_2" class="step_2_label">20</label>
+          </div>
+            
+          <div class="step_2_radio">
+            <input type="radio" name="nameRadio" class="step_2_radio" id="radio_4_2" onclick="makeInput_2()" value="">
+            <label for="radio_4_2" class="step_2_label" onclick="makeInput_2()">Другой </label>
+            <input type="number" name="nameText" id="number">
+          </div>
+        </div>
+   </div>
+   <div class="tab">
+     <p>Место учебы?</p>
+     <div class="step_3">
+       <div class="step_3_studies">
+         <label for="school" class="step_3_label">Название учебного заведения? </label>
+         <input type="text" name="nameText" id="school">
+        </div>
+                  
+      <div class="step_3_studies">
+        <label for="schoolStart" class="step_3_label"> Год начала обучения? </label>
+        <input type="date" name="nameText" id="schoolStart">
+       </div>
+                  
+      <div class="step_3_studies">
+        <label for="schoolEnd" class="step_3_label"> Год окончания обучения? </label>
+        <input type="date" name="nameText" id="schoolEnd">
+      </div>
+        
+      <div class="step_3_studies">
+        <label for="timeSchool" class="step_3_label"> По настоящее время  </label>
+        <input type="checkbox" name="check" id="timeSchool">
+      </div>
+    </div>
+  </div>
+  
+  <div class="tab">
+    <p>Место работы?</p>
+    <div class="step_4">
+      
+      <div class="step_4_job">
+        <label for="job" class="step_4_label">Название фирмы/организации/магазина  </label>
+        <input type="text" name="nameText" id="job">
+      </div>
+                  
+      <div class="step_4_job">
+        <label for="jobStart" class="step_4_label"> Год начала работы?  </label>
+        <input type="date" name="nameText" id="jobStart">
+      </div>
+                  
+      <div class="step_4_job">
+        <label for="jobEnd" class="step_4_label"> Год окончания работы?  </label>
+        <input type="date" name="nameText" id="jobEnd">
+      </div>
+        
+      <div class="step_4_job">
+        <label for="timeJob" class="step_4_label"> По настоящее время  </label>
+        <input type="checkbox" name="check" id="timeJob">
+      </div>
+    </div>
+  </div>
+  
+  <div class="tab">
+    <p>ФИО Телефон!</p>
+    <div class="step_5">
+      <div class="fio">
+        <label for="fio" class="step_3_label"> ФИО  </label>
+        <input type="text" name="nameFio" id="fio">
+      </div>
+      
+      <div class="number">
+        <label for="num" class="step_3_label"> Номер </label>
+        <input type="text" name="nameNumber" id="num">
+      </div>     
+    </div>
+  </div>
+      
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">назад</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">вперед</button>
+          <button id="sub" type="button">отправить</button>
+          
+      </div>
+    </div>
+  </form>
+<script src="script.js"></script>
+
+</body>
+</html>
